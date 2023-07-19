@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Nunito", sans-serif;
+    box-sizing: border-box;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+#espace_cartes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    border-radius: 10px;
+
+}
+
+.slot {
+    height: 120px;
+    width: 120px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 3px 3px 1px lightgrey;
+    background-size: cover;
+    background-position: center;
+}
+
+.slot:hover {
+    filter: grayscale(30%);
+    cursor: pointer;
+}
+
+#score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 30px;
+}
+
+#score p {
+    width: 30%;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    font-weight: 400;
+    font-size: 15px;
+
+}
+button:hover {
+    cursor: pointer;
+}
+
+
+/* classes images */
+.loup {
+    background-image: url("Images/loup.jpg");
+}
+.ours {
+    background-image: url("Images/ours.jpg");
+}
+.daims {
+    background-image: url("Images/daims.jpg");
+}
+.loutre {
+    background-image: url("Images/loutre.jpg");
+}
+.pandaroux {
+    background-image: url("Images/pandaroux.jpg");
+}
+.phoque {
+    background-image: url("Images/phoque.jpg");
+}
+.renard {
+    background-image: url("Images/renard.jpg");
+}
+.zebre {
+    background-image: url("Images/zebre.jpeg");
+}
+.question_mark {
+    background-image: url("Images/question_mark.webp");
+}
