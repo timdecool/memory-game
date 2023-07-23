@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Life+Savers&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --primary-color: #7da976;
@@ -10,20 +10,62 @@
     box-sizing: border-box;
 }
 
-body {
+body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+body {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    font-family: "Nunito", sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: var(--background-color);
 }
 main {
+    margin: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.intro {
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    align-items: flex-end;
+    padding: 0px 30px 0 0;
+    text-align: right;
+    border-right: 1px solid var(--secondary-color);
+    gap: 20px;
 }
+
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 30px;
+    text-align: left;
+    border-left: 1px solid var(--secondary-color);
+}
+
+.score p {
+    height: 40px;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 20px;
+}
+
+#statut {
+    border-bottom: 0px solid black;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Life savers";
+    font-size: 55px;
+}
+
 #espace_cartes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -33,45 +75,37 @@ main {
 
 }
 
-.slot {
+.card {
     height: 120px;
     width: 120px;
     border-radius: 6px;
-    box-shadow: 6px 6px 1px var(--secondary-color);
+    box-shadow: 3px 3px 1px var(--secondary-color);
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
     transition: 0.1s ease-in;
 }
 
-.slot:hover {
-    border: 3px solid var(--primary-color);
-}
-
-#score {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 30px;
-}
-
-#score p {
-    width: 30%;
-    text-align: center;
+.card:hover {
+    transform: translate(-5%, -5%);
+    box-shadow: 10px 10px 1px var(--secondary-color);
 }
 
 button {
-    padding: 10px 20px;
+    width: 100%;
+    padding: 10px 30px;
     font-weight: 400;
     font-size: 15px;
     border-radius: 10px;
-    border: 1px solid lightgrey;
-    background-color: #f7d2b8;
+    border: 0;
+    background-color: var(--secondary-color);
+    align-self: flex-end;
+    transition: 0.2s ease-in;
 
 }
 button:hover {
     cursor: pointer;
+    filter:brightness(90%);
 }
 
 
@@ -100,10 +134,11 @@ button:hover {
 .zebre {
     background-image: url("Images/zebre.jpeg");
 }
-.question_mark {
+.card_back {
     background-image: url("Images/design-3561661_1280.jpg");
+    transition: 0.1s ease-in;
 }
 
-.question_mark:hover {
+.card_back:hover {
     cursor: pointer;
 }
