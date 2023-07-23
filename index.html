@@ -15,18 +15,22 @@
     <!-- Section body du script HTML -->
     <body>
         <main>
+            <h1 class="show-sm">Memory Game</h1>
             <div class="intro">
                 <h1>Memory Game</h1>
                 <p>Fais appel à ta mémoire pour débusquer les huit paires d'animaux qui se cachent sous les cartes avec le moins de coups possible !</p>
             </div>
             <div id="espace_cartes"></div>
             <div class="score">
+                <h1>Memory Game</h1>
                 <div>
-                    <p id="tentatives"></p>
-                    <p id="highscores">Meilleur score :</p>
-                    <p id="statut"></p>
+                    <div>
+                        <p id="tentatives"></p>
+                        <p id="highscores">Meilleur score :</p>
+                        <p id="statut"></p>
+                    </div>
+                    <button onclick="newGame()">Recommencer</button>
                 </div>
-                <button onclick="newGame()">Recommencer</button>
             </div>
         </main>
         <!-- Lien fichier JS -->
