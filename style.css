@@ -6,6 +6,11 @@
     --background-color: #fae9e0;
 }
 
+@font-face {
+    font-family: "Cloudy June";
+    src: url("Fonts/cloudy_june/Cloudy\ June.ttf");
+}
+
 * {
     box-sizing: border-box;
 }
@@ -45,7 +50,7 @@ main {
 
 h1 {
     margin: 0;
-    font-family: "Life savers";
+    font-family: "Cloudy June";
     font-size: 55px;
 }
 
@@ -77,9 +82,7 @@ h1 {
 #espace_cartes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 20px;
-    border-radius: 10px;
 }
 
 .card {
@@ -186,12 +189,13 @@ button:hover {
         margin: 0;
     }
 
-    .score h1 {
-        display: none;
+    #espace_cartes {
+        grid-row: 2;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .espace-jeu {
-        grid-row: 2;
+    .score h1 {
+        display: none;
     }
 
     .show-sm {
@@ -204,6 +208,7 @@ button:hover {
         border: 0;
         padding: 0;
         text-align: center;
+        grid-row: 3;
     }
 
     #statut {
